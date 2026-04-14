@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>계산기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1 class="title">계산기</h1>
+      <p class="subtitle">키보드로도 사용할 수 있어요</p>
+    </header>
+
+    <main class="calculator" role="application" aria-label="계산기">
+      <div class="display-wrap">
+        <div class="expression" id="expression" aria-live="polite"></div>
+        <div class="display" id="display" aria-live="polite">0</div>
+      </div>
+
+      <div class="keys" id="keys">
+        <button type="button" class="key key-fn" data-action="clear" aria-label="전체 지우기">AC</button>
+        <button type="button" class="key key-fn" data-action="sign" aria-label="부호 바꾸기">±</button>
+        <button type="button" class="key key-fn" data-action="percent" aria-label="퍼센트">%</button>
+        <button type="button" class="key key-op" data-op="/" aria-label="나누기">÷</button>
+
+        <button type="button" class="key" data-digit="7">7</button>
+        <button type="button" class="key" data-digit="8">8</button>
+        <button type="button" class="key" data-digit="9">9</button>
+        <button type="button" class="key key-op" data-op="*" aria-label="곱하기">×</button>
+
+        <button type="button" class="key" data-digit="4">4</button>
+        <button type="button" class="key" data-digit="5">5</button>
+        <button type="button" class="key" data-digit="6">6</button>
+        <button type="button" class="key key-op" data-op="-" aria-label="빼기">−</button>
+
+        <button type="button" class="key" data-digit="1">1</button>
+        <button type="button" class="key" data-digit="2">2</button>
+        <button type="button" class="key" data-digit="3">3</button>
+        <button type="button" class="key key-op" data-op="+" aria-label="더하기">+</button>
+
+        <button type="button" class="key key-zero" data-digit="0">0</button>
+        <button type="button" class="key" data-action="decimal">.</button>
+        <button type="button" class="key key-eq" data-action="equals" aria-label="결과">=</button>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
